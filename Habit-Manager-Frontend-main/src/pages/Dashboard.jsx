@@ -84,7 +84,7 @@ export default function Dashboard() {
       <header className="page-heading">
         <div>
           <p className="page-eyebrow">Your daily rhythm</p>
-          <h1 className="page-title">Welcome back{user?.username ? `, ${user.username}` : ''}</h1>
+          <h1 className="page-title">Welcome{user?.username ? `, ${user.username}` : ''}</h1>
           <p className="page-description">Consistency grows from the small things you do today.</p>
         </div>
         <div className="page-date"><FaRegCalendarAlt className="me-2" />{dateLabel}</div>
@@ -97,7 +97,7 @@ export default function Dashboard() {
           <p className="welcome-copy">A good routine is built one small promise kept at a time. Pick a habit and get started.</p>
           <Link to="/habits" className="btn-primary-soft"><FaLeaf /> Explore your habits <FaArrowRight /></Link>
         </div>
-        <div className="welcome-mark" aria-hidden="true"><FaLeaf /></div>
+        <div className="welcome-mark" aria-hidden="true"><img className="brand-mark-image" src="/habit-manager-logo.png" alt="" /></div>
       </section>
 
       <section className="stat-grid" aria-label="Your progress">
