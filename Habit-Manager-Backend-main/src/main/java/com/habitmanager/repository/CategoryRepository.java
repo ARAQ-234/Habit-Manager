@@ -1,0 +1,10 @@
+package com.habitmanager.repository;
+
+import com.habitmanager.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
+    List<Category> findByUserIdIsNullOrUserIdOrderByNameAsc(Integer userId);
+    boolean existsByUserIdAndNameIgnoreCase(Integer userId, String name);
+}
